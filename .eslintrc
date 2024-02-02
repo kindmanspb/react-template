@@ -1,0 +1,38 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:prettier/recommended",
+    "plugin:@conarti/feature-sliced/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "settings": {
+    "import/resolver": {
+      "typescript": true
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "prettier"
+  ]
+}
