@@ -1,4 +1,4 @@
-///<reference types="../src/global" />
+///<reference types="../types/global" />
 
 import { RsbuildConfig } from "@rsbuild/core";
 

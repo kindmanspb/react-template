@@ -15,6 +15,8 @@ const processEnv = Object.keys(parsed)
     return acc;
   }, {});
 
+const isProd = process.env.NODE_ENV !== "development";
+
 export default defineConfig({
   html: {
     template: "./public/index.html",
@@ -40,9 +42,12 @@ export default defineConfig({
         publicPath: "auto",
       },
       plugins: [
-        new RsdoctorRspackPlugin({
-          // plugin options
-        }),
+        ...[
+          isProd &&
+            new RsdoctorRspackPlugin({
+              // plugin options
+            }),
+        ],
       ],
     },
     bundlerChain(chain) {
